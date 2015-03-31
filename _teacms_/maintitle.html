@@ -1,0 +1,29 @@
+
+<div class='zcontentBlock' id='<?=$sid?>' >
+<h1>	
+<?=templateDefineGet()?>
+</h1>
+</div>
+
+<style>
+
+
+#<?=$sid?> {
+
+  <?= configGet ( "cssDebug" ) ?>
+  
+  margin : 0px auto; 
+  width : <?= configGet ( "cssContainerWidth" ) ?>px ;
+  background-color: <?=configGet("cssBackgroundColour")?>;
+
+  padding-left:<?=configGet("cssGapWidth")?>px;
+  padding-right:<?=configGet("cssGapWidth")?>px;
+
+
+}
+
+
+</style>
+
+
+

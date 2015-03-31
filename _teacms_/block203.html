@@ -1,0 +1,51 @@
+<?php
+
+
+$src=templateVarDataProp('_img_src_4_');
+
+$link=templateVarDataProp('_link_');
+
+$userlink=templateVarDataProp('link');
+
+if($userlink!=''){
+
+	$link=$userlink;
+
+}else{
+
+
+	$parenturl=templateVarDataProp('_parenturl_');
+
+	if($parenturl!=''){
+		
+		$link=$parenturl;
+
+	}else{
+
+		$link='homepage.html';
+
+	}
+
+
+}
+//if($link=='') $link='homepage.html';
+
+if(!file_exists($src)){
+	$src="_dangerousbend_/_cache_/_teacms-generic/".templateVarDataProp('fuid');
+}
+
+?>
+
+<?php if ( $itemCounter == 0 ) { ?>
+
+<a id='<?=$sid?>' href='<?=$link?>'>
+<img class='roundedbottoms' src='<?= $src ?>' height='<?=configGet('cssPageMarginTop')?>'/>
+</a>
+
+
+<style>
+#<?=$sid?>{
+}
+</style>
+
+<?php } ?>

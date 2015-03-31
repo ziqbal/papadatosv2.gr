@@ -1,0 +1,29 @@
+
+
+<?php
+
+//logWrite("$view $itemCounter / $_totalItems ");
+
+
+$level=templateVarDataProp('_level_');
+logWrite($level);
+
+if($itemCounter<($_totalItems/2)){
+	$class="{$view}Lower";
+}else{
+	$class="{$view}Higher";
+}
+
+if($level>3){
+?>
+
+
+<a href="<?=templateVarDataProp('_url_')?>">
+<span class="<?=$class?>">
+	<?=templateVarDataProp('_displaytext_')?>
+</span>
+</a>
+
+<?php } ?>
+
+

@@ -1,0 +1,13 @@
+parentMaintitle="Questionnaire";
+
+create welcome,instructions,thankyou
+import questions
+- use QX for maintitle and insert text into longdescription
+
+
+Q $$ ID $$ TITLE
+A $$ ID $$ TITLE $$ VALUE $$ NEXT
+A $$ ID $$ TITLE $$ VALUE $$ NEXT
+A $$ ID $$ TITLE $$ VALUE $$ NEXT
+A $$ ID $$ TITLE $$ VALUE $$ NEXT
+A $$ ID $$ TITLE $$ VALUE $$ NEXT

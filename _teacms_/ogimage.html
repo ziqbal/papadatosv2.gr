@@ -1,0 +1,17 @@
+<?php
+
+$ogimage=dirname(httpBasePrecacherURL()).'/'.'logo.png';
+
+$img = templateVarArray('page','_img_src_4_');
+
+if($img!=''){
+
+
+	$ogimage=dirname(httpBasePrecacherURL()).'/'.$img;
+
+
+}	
+
+?>
+
+<meta property="og:image" content="<?=$ogimage?>"/>

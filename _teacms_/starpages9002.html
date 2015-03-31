@@ -1,0 +1,122 @@
+<?php if($starpageLoadFirstTime){?>
+
+
+
+<script>
+
+$( function( ) {
+
+
+	$("._preloader_").hide();
+
+	////////
+
+	var flagPaste = false ;
+
+	$("textarea").bind('paste', function(e) {
+            var current = $(this).val();
+            $(this).val(current+"\n");
+            flagPaste = true;
+	});
+
+	var el = $("._formsend_");
+
+	var parseURL = "<?=str_rot13(configGet('PARSE_URL'));?>";
+
+	function srt(str) {
+	  return (str + '').replace(/[a-z]/gi, function(s) {return String.fromCharCode(s.charCodeAt(0) + (s.toLowerCase() < 'n' ? 13 : -13));});
+	}	
+
+	function validateEmail(email) {
+	    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\ ".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	    return re.test(email);
+	}	
+
+	el.click(function(){
+
+		var th = this ;
+
+		if(parseURL==''){
+			alert("PARSE NOT SETUP!");
+			return(false);
+		}
+
+		var flagValidationOK = true ;
+
+		$("._validation_email").each(function(){
+			$("#"+$(this).attr('id') +  "_error").hide();
+			if(!validateEmail($(this).val())){
+				$("#"+$(this).attr('id') +  "_error").show();
+				flagValidationOK = false;
+			}
+		});
+
+		$("._validation_notblank").each(function(){
+			$("#"+$(this).attr('id') +  "_error").hide();
+			if($(this).val().trim()==''){
+				$("#"+$(this).attr('id') +  "_error").show();
+				flagValidationOK = false;
+			}
+		});		
+
+		if(flagPaste) flagValidationOK = true;
+
+		if(!flagValidationOK){
+			return(false);
+		}
+
+		if(!flagPaste) $ ( th ).hide ( ) ;
+		$("._preloader_").show();
+
+		var serializedData = '';
+
+		$("form").each(function() {
+		   serializedData = serializedData + JSON.stringify($(this).serializeArray(),undefined, 2);  
+		});
+
+	    //console.log(serializedData);
+
+
+	    var origTitle = document.title ;
+	    document.title = 'SENDING';
+
+	    function setHeader(xhr) {
+
+     xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+    } 
+
+		$.ajax({
+		  dataType: "jsonp",
+		  beforeSend: setHeader,
+		  url: srt(parseURL),
+		  data: {"sd":serializedData, "pn":"<?=PROJECTNAME?>", "dt":origTitle , "wl":window.location.href, "dr":document.referrer },
+		  success:
+		  	function(data){
+				$("._preloader_").hide();
+				if(flagPaste){
+					$("textarea").val("");
+				}else{
+		  			alert("OK");
+		  		}
+		  		document.title = 'SENT';
+		  	},
+		  error:
+		  	function(data){
+		  		console.log(data);	
+				$("._preloader_").hide();
+		  		alert("Oops! Something went wrong! Refresh the page and try again!");
+		  	}
+
+		});	   
+
+		return(false); 
+
+	});
+
+} ) ;
+
+</script>
+
+
+<?php }?>
+

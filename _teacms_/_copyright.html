@@ -1,0 +1,46 @@
+<?php
+
+$sid=filesystemBaseGetFilenameWithoutExt(__FILE__);
+
+
+$year=timeBaseCurrentYear();
+
+?>
+
+
+
+
+<div class='roundedtops' id='<?=$sid?>'>
+
+	&copy;<span id='<?=$sid?>Year'><?=$year?></span>&nbsp;<?=PROJECTNAME?>
+
+</div>
+
+<style>
+
+#<?=$sid?>{
+	position:fixed;
+	bottom:0px;
+	right:0px;
+
+
+  background-color: #000;
+  font-size: 0.5em;
+  font-weight: lighter;
+  border-top: 1px solid #888;
+  border-right: 1px solid #888;
+  border-left: 1px solid #888;
+  color: white;
+  padding-left:3px;
+  padding-right:3px;
+  margin-right:<?=configGet("cssGapWidth")?>px;
+}
+
+</style>
+
+
+<script>
+$(function(){
+	$("#<?=$sid?>Year").html(new Date().getFullYear());
+});
+</script>

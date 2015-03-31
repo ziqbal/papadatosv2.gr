@@ -1,0 +1,84 @@
+<?php
+
+$sid = pathinfo( __FILE__ , PATHINFO_FILENAME ) ;
+
+?>
+
+<div class='contentBlock' id='<?=$sid?>'>
+
+<form id='<?=$sid?>Form'>
+
+<div class='<?=$sid?>Label'><!--{translate-->name<!--}translate--></div>
+<input class='_validation_notblank' id='<?=$sid?>_name' name='<?=$sid?>_name' type="text" size="40" value=''>
+<div id='<?=$sid?>_name_error' class='<?=$sid?>Error'><!--{translate-->nameerror<!--}translate--></div>
+
+<div class='<?=$sid?>Label'><!--{translate-->email<!--}translate--></div>
+<input class='_validation_email' id='<?=$sid?>_email' name='<?=$sid?>_email' type="text" size="40" value=''>
+<div id='<?=$sid?>_email_error' class='<?=$sid?>Error'><!--{translate-->emailerror<!--}translate--></div>
+
+<div class='<?=$sid?>Label'><!--{translate-->messsage<!--}translate--></div>
+<textarea id='<?=$sid?>_message' name='<?=$sid?>_message' cols='60' rows='10'></textarea>
+
+<button class='_formsend_' id='<?=$sid?>Send'>&nbsp;<!--{translate-->send<!--}translate-->&nbsp;</button>
+<img class='_preloader_' id='<?=$sid?>Preloader' src='preloader.gif'/>
+
+</form>
+
+</div>
+
+
+<style>
+
+#<?=$sid?>{
+
+}
+
+.<?=$sid?>Label {
+
+	font-weight : bolder ;
+	font-size : larger ;
+
+}
+
+.<?=$sid?>Error {
+
+     display: none;
+     background-color: #F88;
+     font-size: small;
+     padding: 3px;
+     margin-bottom: 3px;
+
+}
+
+#<?=$sid?>Form input {
+
+	margin-bottom : 10px ;
+	width : 100% ; 
+     box-sizing : border-box ;
+     -webkit-box-sizing : border-box ;
+     -moz-box-sizing : border-box ;
+
+}
+
+#<?=$sid?>Form textarea {
+
+	margin-bottom : 10px ; 
+     width : 100% ;
+     box-sizing : border-box ;
+     -webkit-box-sizing : border-box ;
+     -moz-box-sizing : border-box ;	
+
+}
+
+#<?=$sid?>Form select {
+
+     margin-bottom : 10px ;
+
+}
+
+#<?=$sid?>Preloader {
+
+}
+
+</style>
+

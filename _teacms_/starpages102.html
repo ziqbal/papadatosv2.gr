@@ -1,0 +1,39 @@
+<?php
+
+
+$embed=templateVarDataProp('embed');
+$newWidth = 420;
+$newHeight = 250;
+
+$embed = preg_replace(
+   array('/width="\d+"/i', '/height="\d+"/i'),
+   array(sprintf('width="%d"', $newWidth), sprintf('height="%d"', $newHeight)),
+   $embed);
+
+$maintitle = templateVarDataProp('maintitle') ;
+
+?>
+
+
+<div class='' id="<?=$sid?>">
+ <center> 
+	<?=$embed?>
+<?php if($maintitle!=''){?>
+<div class='caption' id='<?=$sid?>Caption'><?=$maintitle?></div>
+<?php } ?>
+ </center> 
+</div>
+
+
+<style>
+
+#<?=$sid?>{
+	<?= configGet ( "cssDebug" ) ?>
+}
+
+#<?=$sid?>Caption{
+	<?= configGet ( "cssDebug" ) ?>
+}
+
+
+</style>

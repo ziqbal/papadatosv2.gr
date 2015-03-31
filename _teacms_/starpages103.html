@@ -1,0 +1,43 @@
+<?php if($starpageLoadFirstTime){ ?>
+
+<script src="audiojs/audio.min.js"></script>
+<script>
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
+</script>
+
+<?php } ?>
+
+
+<div class='' id='<?=$sid?>'>
+<center>
+<div>
+<audio src="<?=templateVarDataProp('_fuid_')?>" preload="none" />
+</div>
+
+<?php if(templateVarDataProp('maintitle')!=''){ ?>
+<div class='caption' id='<?=$sid?>Caption'>
+<a title="<?=htmlspecialchars(templateVarDataProp('_displaytext_'))?>" href='<?=templateVarDataProp('_fuid_')?>' download='<?=PROJECTNAME?>-audio.mp3'><?=templateVarDataProp('maintitle')?></a>
+</div>
+
+<?php }?>
+
+
+</div>
+</center>
+
+
+<style>
+#<?=$sid?> {
+
+	<?= configGet ( "cssDebug" ) ?>
+}
+
+#<?=$sid?>Caption{
+	<?= configGet ( "cssDebug" ) ?>
+}
+
+
+</style>
+

@@ -1,0 +1,22 @@
+<?php
+
+$sid = filesystemBaseGetFilenameWithoutExt ( __FILE__ ) ;
+
+?>
+
+<div class='flexright _collapse' id='<?=$sid?>'>
+<!--{level1-->
+<!--}level1-->
+</div>	
+
+<style>
+
+#<?=$sid?> {
+
+  <?= configGet ( "cssDebug" ) ?>
+	margin : 0px auto; 
+	width : <?= configGet ( "cssContainerWidth" ) ?>px ;
+
+}
+
+</style>

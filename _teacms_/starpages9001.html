@@ -1,0 +1,95 @@
+<?php
+
+$sitemap=dbTreeGetSiteMap(templateVarDataProp('_ref_'));
+
+
+$cssContainerWidth=configGet("cssPageWidth")/(1*configGet("cssG"));
+
+
+?>
+
+<div class='' id="<?=$sid?>">
+
+<?php foreach($sitemap as $sk=>$sm){
+	//logWrite($sm['_level_']);
+?>
+
+<a title="<?=htmlspecialchars($sm['_displaytext_'])?>" href="<?=$sm['_url_']?>">
+<div class='oddevenrows <?=$sid?>Title  sitemaplevel<?=$sm['_level_']?>'><?=$sm['_displaytext_']?></div>
+</a>
+
+<?php }?>
+
+</div>
+
+<style>
+#<?=$sid?>{
+}
+
+
+.sitemaplevel0{
+  margin-top: 10px;
+  padding-left: 0px;
+  font-weight: bold;
+  font-size: larger;
+}
+.sitemaplevel1{
+  padding-left: 10px;
+  border-left: 3px solid #888;
+}
+.sitemaplevel2{
+  padding-left: 20px;
+  font-weight: lighter;
+  font-size: smaller;
+  border-left: 3px solid #888;
+}
+.sitemaplevel3{
+  padding-left: 30px;
+  font-weight: lighter;
+  font-size: smaller;
+  border-left: 3px solid #888;
+}
+.sitemaplevel4{
+  padding-left: 40px;
+  font-weight: lighter;
+  font-size: smaller;
+  border-left: 3px solid #888;
+}
+.sitemaplevel5{
+  padding-left: 50px;
+  font-weight: lighter;
+  font-size: smaller;
+  border-left: 3px solid #888;
+}
+.sitemaplevel6{
+  padding-left: 60px;
+  font-weight: lighter;
+  font-size: smaller;
+  border-left: 3px solid #888;
+}
+.sitemaplevel7{
+  padding-left: 70px;
+  font-weight: lighter;
+  font-size: smaller;
+  border-left: 3px solid #888;
+}
+.sitemaplevel8{
+  padding-left: 80px;
+  font-weight: lighter;
+  font-size: smaller;
+  border-left: 3px solid #888;
+}
+.sitemaplevel9{
+  padding-left: 90px;
+  font-weight: lighter;
+  font-size: smaller;
+  border-left: 3px solid #888;
+}
+.sitemaplevel10{
+  padding-left: 100px;
+  font-weight: lighter;
+  font-size: smaller;
+  border-left: 3px solid #888;
+}
+</style>
+

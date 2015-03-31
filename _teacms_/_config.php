@@ -1,0 +1,13 @@
+<?php
+
+
+
+$_TEACMSCONFIG['APP_IMAGE_MODES']='
+
+	pages:fwx100x?x0x1|racx32x32x0x1|fwifx2001x?x0x1|fwifx136x?x0x1|fwifx680x?x0x1,
+
+';
+
+
+
+

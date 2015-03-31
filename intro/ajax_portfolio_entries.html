@@ -1,0 +1,123 @@
+﻿<?php
+
+/* 
+This page only simulates a database connection.
+The entries should be retrieved from an actual database and
+delivered in the same format used in $entries array.
+*/
+
+$entries = array(
+	
+	
+	<<<EOF
+		<li data-size="1-2">
+			<article class="entry">
+				<div class="entry-featured">
+					<div class="overlay">
+						<div class="dark color-overlay"></div>
+						
+						<div class="content-overlay">
+							<div class="outer">
+							<div class="inner">
+								<a class="button colorbox" href="assets/full/pr1.jpg" data-title="Αποστολή Κομψότητας<small></small>">
+									<i class="eye icon"></i>
+								</a>
+								
+								<h2 class="entry-title">
+									<a href="#">
+										Αποστολή Κομψότητας
+									</a>
+									<small></small>
+								</h2>
+							</div>
+							</div>
+						</div>
+						
+						<img src="assets/resized/pr1.jpg" alt=""/>
+					</div>
+				</div>
+			</article>
+		</li>
+EOF
+		
+	, 	<<<EOF
+		<li data-size="2-2">
+			<article class="entry">
+				<div class="entry-featured">
+					<div class="overlay">
+						<div class="dark color-overlay"></div>
+						
+						<div class="content-overlay">
+							<div class="outer">
+							<div class="inner">
+								<a class="button colorbox" href="assets/full/pr2.jpg" data-title="Ανεπιτήδευτη κομψότητα<small></small>">
+									<i class="eye icon"></i>
+								</a>
+								
+								<h2 class="entry-title">
+									<a href="#">
+									Ανεπιτήδευτη κομψότητα	
+									</a>
+									<small>Casaviva</small>
+								</h2>
+							</div>
+							</div>
+						</div>
+						
+						<img src="assets/resized/pr2.jpg" alt="Ανεπιτήδευτη κομψότητα"/>
+					</div>
+				</div>
+			</article>
+		</li>
+EOF
+		
+	, 	<<<EOF
+		<li data-size="2-1">
+			<article class="entry">
+				<div class="entry-featured">
+					<div class="overlay">
+						<div class="dark color-overlay"></div>
+						
+						<div class="content-overlay">
+							<div class="outer">
+							<div class="inner">
+								<a class="button colorbox" href="assets/full/pr3.jpg" data-title="Εισαγωγή στην κομψότητα<small></small>">
+									<i class="eye icon"></i>
+								</a>
+								
+								<h2 class="entry-title">
+									<a href="#">
+										Εισαγωγή στην κομψότητα
+									</a>
+									<small>Maison Figaro</small>
+								</h2>
+							</div>
+							</div>
+						</div>
+						
+						<img src="assets/resized/pr3.jpg" alt="Εισαγωγή στην κομψότητα"/>
+					</div>
+				</div>
+			</article>
+		</li>
+EOF
+	 	
+	
+	);
+	
+	
+	
+	
+	
+
+$from = $_GET['from'];
+$count = $_GET['count'];
+
+if($from >= count($entries)){
+	echo "none";
+	die("");
+}
+
+for($i = $from ; $i < min(count($entries) , (int) $from + (int) $count) ; $i++){
+	echo $entries[$i];
+}

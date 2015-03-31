@@ -1,0 +1,14 @@
+
+<a title="<?=htmlspecialchars(templateVarDataProp('_displaytext_'))?>" href="<?=templateVarDataProp('_url_')?>">
+<div id='<?=$sid?>' class="<?=$_fid?> <?=$_fid?>Active<?=templateVarDataProp('_navtreeactive_')?> rounded">
+<?=templateVarDataProp('_displaytext_')?>
+</div>
+</a>
+
+
+<style>
+#<?=$sid?>{
+  padding:0px <?=configGet('cssGapWidth')?>px;
+  margin-left:-<?=configGet('cssGapWidth')?>px;
+}
+</style>

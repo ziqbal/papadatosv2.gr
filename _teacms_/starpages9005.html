@@ -1,0 +1,30 @@
+<?php
+
+$UIWIDGET=stringSanitizeHTML(templateVarDataProp('code'));
+
+$widgetPath=PROJECTTHEMEPATH."/_ui_/{$UIWIDGET}/boot.php";
+
+if(file_exists($widgetPath)){
+
+	if($starpageLoadFirstTime){
+		$widgetConfigPath=PROJECTTHEMEPATH."/_ui_/config.php";
+		if(file_exists($widgetConfigPath)){
+			include_once($widgetConfigPath);
+		}else{
+			logWrite("[config] not found.");
+		}
+	}
+
+	print("\n<div class='uiwidgetContainer {$UIWIDGET}Container'>");
+	include($widgetPath);
+	print("\n</div>");
+
+}else{
+
+	logWrite("NO WIDGET [{$UIWIDGET}] FOUND!");
+	
+}
+
+
+?>
+

@@ -1,0 +1,94 @@
+<?php
+
+$cssContainerHeight=configGet("cssPageWidth")/(1*configGet("cssG"));
+
+$geocode=templateVarDataProp('geocode');
+
+?>
+
+<div class='' id="<?=$sid?>">
+<div id='<?=$sid?>MapCanvas'></div>
+<center>
+<div class='caption' id='<?=$sid?>Maintitle'><?=templateVarDataProp('_displaytext_')?></div>
+</center>
+</div>
+
+<style>
+
+
+#<?=$sid?>{
+	<?= configGet ( "cssDebug" ) ?>
+
+}
+
+
+#<?=$sid?>MapCanvas{
+	height:<?=$cssContainerHeight?>px;
+
+
+}
+
+#<?=$sid?>Maintitle{
+	<?= configGet ( "cssDebug" ) ?>
+
+}
+
+
+</style>
+
+<?php if($starpageLoadFirstTime){?>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6dWphhjE4uX2LdZJJXuzf4CTUR424ws8"></script>
+
+<script>
+
+var _teacmsMaps={};
+
+function initialize() {
+
+	for (var k in _teacmsMaps) {
+	    // use hasOwnProperty to filter out keys from the Object.prototype
+	    if (_teacmsMaps.hasOwnProperty(k)) {
+
+
+	    	var geocode = _teacmsMaps[k];
+
+			var mapOptions = {center: new google.maps.LatLng(geocode.ox,geocode.oy), zoom: geocode.z , mapTypeId: geocode.t};
+			var thisMap = new google.maps.Map(document.getElementById(k), mapOptions);
+			var marker = new google.maps.Marker({
+		      position: new google.maps.LatLng(geocode.lat,geocode.lng),
+		      map: thisMap
+		  	});
+
+
+
+	    }
+	}
+
+
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+
+<?php }?>
+
+
+<script>
+
+_teacmsMaps["<?=$sid?>MapCanvas"]='';
+<?php if($geocode!=''){?>
+_teacmsMaps["<?=$sid?>MapCanvas"]=JSON.parse('<?=$geocode?>');
+<?php } ?>
+
+</script>
+
+
+
+
+
+
+
+
+
+

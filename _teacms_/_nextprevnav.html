@@ -1,0 +1,67 @@
+<?php
+
+$sid=filesystemBaseGetFilenameWithoutExt(__FILE__);
+
+?>
+
+
+<div id='<?=$sid?>' class='contentBlock _collapse'>
+
+<table>
+
+<tr>
+<td id='<?=$sid?>Previous'>
+<!--{navtreebreadcrumbsprevious-->
+<!--}navtreebreadcrumbsprevious-->
+</td>
+
+
+<td id='<?=$sid?>Parent'>
+
+<!--{navtreebreadcrumbsparent-->
+<!--}navtreebreadcrumbsparent-->
+
+<!--{navtreebreadcrumbslevelchildren-->
+<!--}navtreebreadcrumbslevelchildren-->
+
+</td>
+
+<td id='<?=$sid?>Next'>
+<!--{navtreebreadcrumbsnext-->
+<!--}navtreebreadcrumbsnext-->
+</td>
+
+</tr>
+</table>
+
+</div>	
+
+
+<style>
+
+#<?=$sid?> {
+
+}
+
+#<?=$sid?> table{
+  width:100%;
+}
+
+#<?=$sid?> table td{
+	vertical-align: top;
+  width:33%;
+}
+
+#<?=$sid?>Parent{
+  text-align: center;
+}
+
+#<?=$sid?>Parent div{
+}
+
+
+#<?=$sid?>Next{
+  text-align: right;
+}
+
+</style>

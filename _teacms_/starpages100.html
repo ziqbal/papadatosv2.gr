@@ -1,0 +1,56 @@
+
+
+
+<div class='' id='<?=$sid?>'>
+
+<?php if(templateVarDataProp('maintitle')!=''){ ?>
+
+<div class='<?=$sid?>Title'><h2><?=templateVarDataProp('maintitle')?></h2></div>
+
+<?php }?>
+
+<?php if(templateVarDataProp('shortdescription')!=''){?>
+
+<div class='<?=$sid?>Shortdescription'><?=templateVarDataProp('shortdescription')?></div>
+
+<?php }?>
+
+
+<?php if(templateVarDataProp('fuid')!=''){?>
+
+<div class='<?=templateVarDataProp('_style_')?>'><img alt='<?=templateVarDataProp('maintitle')?>' src='<?=templateVarDataProp('_img_src_4_')?>'/></div>
+
+<?php }?>
+
+<?php if(templateVarDataProp('longdescription')!=''){?>
+
+<div class='<?=$sid?>Longdescription'><?=templateVarDataProp('longdescription')?></div>
+
+<?php }?>
+
+
+</div>
+
+
+<style>
+#<?=$sid?> {
+
+
+}
+
+.<?=$sid?>Title {
+
+	margin-bottom: 20px;
+
+}
+
+.<?=$sid?>Shortdescription{
+	font-weight: lighter;
+	font-size: smaller;
+	margin-bottom: 20px;
+}
+.<?=$sid?>Longdescription{
+}
+
+</style>
+

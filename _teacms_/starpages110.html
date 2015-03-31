@@ -1,0 +1,20 @@
+<?php
+
+$fn=PROJECTTHEMEPATH.'/'.templateVarDataProp('filename');
+
+$content='';
+if(file_exists($fn)){
+	$content=file_get_contents($fn);
+}
+
+if($content!=''){
+?>
+
+<div id='<?=$sid?>'>
+
+<?=$content?>
+
+</style>
+
+<?php } ?>
+

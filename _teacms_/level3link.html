@@ -1,0 +1,18 @@
+<?php
+
+$breadcrumbs=templateViewGet('navtreebreadcrumbsdata');
+//logWrite($breadcrumbs);
+
+$flagDisplay=false;
+if(isset($breadcrumbs[2])){
+	$flagDisplay=true;
+	$page=$breadcrumbs[2];
+}
+
+?>
+
+<?php if($flagDisplay){ ?>
+
+<h2><a href="<?=$page['_link_']?>"><?=$page['_displaytext_']?></a></h2>
+
+<?php } ?>

@@ -1,0 +1,171 @@
+<?php
+
+// $form & $metadata
+
+/*
+	$value=stringBaseSafeJSON($v);
+	//logWrite($value);
+	print("formSetInput('#forminput$k',$value);");
+
+$data = array( "key"=> "value");
+$json = json_encode($data);
+$value=stringBaseSafeJSON($json);
+print("formSetInput('#forminputform',$value);");
+*/
+
+parse_str( $form[ 'form' ] , $formArray ) ;
+
+//logWrite($formArray);
+
+/*
+
+Array
+(
+    [happiness] => 4
+    [island1] => 1
+    [island3] => 3
+    [misc1] => mm1
+    [misc2] => mm2
+    [power] => 3
+)
+
+*/
+
+$output="";
+
+// COMMON
+
+$output.="
+<div>
+HAPPINESS:
+<input type='radio' name='happiness' value='1'/> 1
+<input type='radio' name='happiness' value='2'/> 2
+<input type='radio' name='happiness' value='3'/> 3
+<input type='radio' name='happiness' value='4'/> 4
+<input type='radio' name='happiness' value='5'/> 5
+</div>
+<div>
+ISLAND:
+<input type='checkbox' name='island1' value='1'/> Football
+<input type='checkbox' name='island2' value='2'/> Hat
+<input type='checkbox' name='island3' value='3'/> TV
+</div>
+<div>
+MISC:
+<input type='text' name='misc1' value=''/> 
+<input type='text' name='misc2' value=''/> 
+</div>
+
+<div>
+LOCATION:
+COUNTRY:<select name='country'>
+</select>
+CITY:<select name='city'>
+</select>
+</div>
+";
+
+// SPECIFIC
+
+if($metadata[ 'star' ] == 203 ) {
+	$output.="
+<div>
+POWER:
+<input type='radio' name='power' value='1'/> 1
+<input type='radio' name='power' value='2'/> 2
+<input type='radio' name='power' value='3'/> 3
+</div>	
+	";
+}
+
+// CODE
+
+$output.="
+<script>
+$('#forminputform').hide();
+$('#_pageFormContainer :input').off().on('change keyup paste click', function(){
+	//console.log($(this).attr('name'));      
+	$('#forminputform').val($('#_pageFormContainer').serialize());
+})
+</script>
+";
+
+$output.="
+<script>
+
+$(function(){
+
+	var _selectData = [ ] ;
+
+	_selectData.push( [ 'USA' , [ 'New York' , 'Washinton' ] ] ) ;
+	_selectData.push( [ 'UK' , [ 'London' , 'Manchester' , 'Burnley' ] ] ) ;
+	_selectData.push( [ 'Greece' , [ 'Athens' , 'Patras' , 'Volos' ] ] ) ;
+
+	var _selectDataLength = _selectData.length; 
+
+	var buff = '<option disabled selected>--SELECT--</option>' ;
+	for (var i = 0; i < _selectDataLength; i++) {
+	    buff += \"<option value='\"+(i+1)+\"'>\"+_selectData[i][0]+\"</option>\" ;
+	}
+
+
+	$('select[name=\"country\"]').html(buff).on('change',function(){
+
+		var _selectSecond = _selectData[$(this).val()-1];
+		_selectDataLength = _selectSecond[1].length; 
+
+		buff = '<option disabled selected>--SELECT--</option>' ;
+		for (var i = 0; i < _selectDataLength; i++) {
+		    buff += \"<option value='\"+(i+1)+\"'>\"+_selectSecond[1][i]+\"</option>\" ;
+		}		
+
+		$('select[name=\"city\"]').html(buff);
+
+	});
+
+});
+
+</script>
+";
+
+
+$zoutput='';
+foreach($formArray as $k=>$v){
+	//$('input[name="' + name+ '"]').val([SelectedValue]);
+
+$t=json_encode($v);
+
+$zoutput.="
+<script>
+
+input=$('input[name=\"$k\"]');
+type=input.attr('type');
+//console.log('type  '+type);
+
+if(type=='text') input.val($t);
+
+if(type=='checkbox') input.prop('checked', true);
+if(type=='radio') $('input[name=$k][value=$v]').prop('checked', true); 
+
+if(input.is('select') === true) console.log('SELECT!');
+
+if( $( 'select[name=\"$k\"]' ) ) {
+
+	//console.log('$k '+' $v ');
+	$( 'select[name=\"$k\"]' ).val($t).trigger('change'); 
+
+}
+
+
+</script>
+";
+
+}
+
+
+$output="<form id='_pageFormContainer'>$output $zoutput</form>";
+$output=json_encode($output);
+
+print( " $( '#_pageFormContainer' ).remove() ; " ) ;
+print( " $( '#forminputform' ).after( $output ) ; " ) ;
+

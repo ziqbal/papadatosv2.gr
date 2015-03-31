@@ -1,0 +1,143 @@
+<?php if($starpageLoadFirstTime){
+
+
+	$jsBlob=dbTreeGetSearch(templateVarDataProp('_ref_'));
+
+
+?>
+
+
+
+<div id='<?=$sid?>'>
+
+<div id='<?=$sid?>Input'>
+<form action="<?=httpBaseGetURLFilename()?>" method="get">
+<input type="search" type="text" name="s" placeholder="Search & Enter..." value="">
+</form>
+</div>
+
+	
+<div id='<?=$sid?>Count'><span id='<?=$sid?>CountTotal'>0</span> result(s)</div>
+<div id='<?=$sid?>Results'></div>
+
+</div>
+
+<style>
+#<?=$sid?>{
+}
+.<?=$sid?>EvenOdd{
+	background-color: #fafafa;
+}
+.searchResultItemTitle{
+	font-weight: bold;
+}
+.searchResultItemParentTitle{
+	font-weight: lighter;
+	font-size: small;
+	border:1px solid #aaa;
+	padding:0px 3px;
+	margin-left: 3px;
+}
+</style>
+
+<script>
+
+var layoutSearchRun=function(){
+
+	var accentsTidy = function(s){
+		var r=s.toLowerCase();
+		r = r.replace(new RegExp("\\s", 'g'),"");
+		r = r.replace(new RegExp("[àáâãäå]", 'g'),"a");
+		r = r.replace(new RegExp("æ", 'g'),"ae");
+		r = r.replace(new RegExp("ç", 'g'),"c");
+		r = r.replace(new RegExp("[èéêë]", 'g'),"e");
+		r = r.replace(new RegExp("[ìíîï]", 'g'),"i");
+		r = r.replace(new RegExp("ñ", 'g'),"n");
+		r = r.replace(new RegExp("[òóôõö]", 'g'),"o");
+		r = r.replace(new RegExp("œ", 'g'),"oe");
+		r = r.replace(new RegExp("[ùúûü]", 'g'),"u");
+		r = r.replace(new RegExp("[ýÿ]", 'g'),"y");
+		r = r.replace(new RegExp("\\W", 'g'),"");
+		return r;
+	};
+
+
+	function getQueryVariable(variable) {
+		var query = window.location.search.substring(1);
+		var vars = query.split('&');
+		for (var i = 0; i < vars.length; i++) {
+			var decoded = decodeURIComponent(vars[i]);
+			var pair = decoded.split('=');
+			if (pair[0] == variable) return pair[1];
+		}
+		return("");
+	}
+
+	var sq=getQueryVariable('s');
+	//sq=accentsTidy(sq);
+
+	if(sq.length>0){
+		sq=sq.toLowerCase();
+		//alert(sq);
+		var sb=<?=$jsBlob?>;
+		//console.log(sb);
+
+		buff='';
+
+		var totalHits=0;
+		for (var key in sb) {
+			if (sb.hasOwnProperty(key)) {
+				var title=sb[key][0];
+				var words=sb[key][1];
+				var level=sb[key][2];
+				var childofcurrentpage=sb[key][3];
+				var hascontent=sb[key][4];
+				hascontent=1;
+				var parenttitle=sb[key][5];
+				//words=accentsTidy(words);
+				//console.log(words);
+				if(words.indexOf(sq)!=-1){
+					if(hascontent==1){
+						buff+="<a href='"+key+"'>";
+						buff+="<div class='searchResultItem searchResultItemHasContent'>";
+						buff+="<span class='searchResultItemTitle'>"+title+"</span>";
+						buff+="<span class='searchResultItemParentTitle'>"+parenttitle+"</span>";
+						buff+="</div>";
+						buff+="</a>";
+					}else{
+						buff+="<div class='searchResultItem searchResultItemHasNoContent'>";
+						buff+="<span class='searchResultItemTitle'>"+title+"</span>";
+						buff+="<span class='searchResultItemParentTitle'>"+parenttitle+"</span>";
+						buff+="</div>";
+					}
+					//alert(buff);
+					//alert(key + " -> " + title);
+					totalHits++;
+				}
+			}
+		}
+		//alert(buff);
+		$('#<?=$sid?>Results').html(buff);
+		$('#<?=$sid?>CountTotal').html(totalHits);
+
+		var i = 0;
+		$(".searchResultItem").each(function(i){
+		    if(i%2===0){
+				$(this).addClass("<?=$sid?>EvenOdd");
+		    }
+		    i++;
+		});
+
+	}
+}
+
+
+$(function(){
+	layoutSearchRun();
+});
+
+</script>
+
+
+
+<?php }?>

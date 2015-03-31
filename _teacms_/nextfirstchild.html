@@ -1,0 +1,26 @@
+<?php
+
+$children=templateViewGet('navtreebreadcrumbslevelchildrendata');
+//logWrite($children);
+
+if(isset($children[0])){
+	$page=$children[0];
+
+
+?>
+
+<div class="one-half column" id="<?=$sid?>">
+
+<a title="<?=htmlspecialchars($page['_displaytext_'])?>" href="<?=$page['_url_']?>">
+&#9654;
+</a>
+
+</div>
+
+<style>
+#<?=$sid?>{
+	text-align:right;
+}
+</style>
+
+<?php } ?>
