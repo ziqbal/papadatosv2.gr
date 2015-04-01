@@ -6,8 +6,9 @@
 
 $( function( ) {
 
+	console.log("LOADING...");
 
-	$("._preloader_").hide();
+	//$("._preloader_").hide();
 
 	////////
 
@@ -66,7 +67,7 @@ $( function( ) {
 		}
 
 		if(!flagPaste) $ ( th ).hide ( ) ;
-		$("._preloader_").show();
+		//$("._preloader_").show();
 
 		var serializedData = '';
 
@@ -85,6 +86,7 @@ $( function( ) {
      xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
     } 
 
+    	
 		$.ajax({
 		  dataType: "jsonp",
 		  beforeSend: setHeader,
@@ -96,18 +98,19 @@ $( function( ) {
 				if(flagPaste){
 					$("textarea").val("");
 				}else{
-		  			alert("OK");
+		  			alert("Form Sent. Thank You!");
 		  		}
 		  		document.title = 'SENT';
 		  	},
 		  error:
 		  	function(data){
 		  		console.log(data);	
-				$("._preloader_").hide();
+				//$("._preloader_").hide();
 		  		alert("Oops! Something went wrong! Refresh the page and try again!");
 		  	}
 
-		});	   
+		});	  
+		
 
 		return(false); 
 

@@ -20,7 +20,7 @@ $__stars[]=array(108,"markers/arrow-curve-000-left.png","Lead",1,array("maintitl
 //$__stars[]=array(203,"markers/picture-small.png","Logo",1,array("maintitle","fuid","link"));
 
 //$__stars[]=array(9001,"markers/sitemap.png","Sitemap",1,array("maintitle"));
-//$__stars[]=array(9002,"markers/mail.png","Contact",1,array("maintitle"));
+$__stars[]=array(9002,"markers/mail.png","Contact",1,array("maintitle"));
 //$__stars[]=array(9003,"markers/magnifier-left.png","Search",1,array("maintitle"));
 //$__stars[]=array(9004,"markers/brain.png","Translation Memory",1,array("maintitle","embed"));
 //$__stars[]=array(9005,"markers/block.png","UI Widget",1,array("maintitle","code"));
