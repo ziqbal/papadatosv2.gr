@@ -176,7 +176,8 @@ Salone Milano 2012
 </li>
 
 	
-EOF	
+EOF
+	
 	);
 	
 	
