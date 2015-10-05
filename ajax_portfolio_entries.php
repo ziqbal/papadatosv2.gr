@@ -19,6 +19,99 @@ $entries = array(
 						<div class="content-overlay">
 							<div class="outer">
 							<div class="inner">
+								<a class="button colorbox" href="assets/full/pre8.jpg" data-title="Fusce tristique lectus <small>Project Subtitle</small>">
+									<i class="eye icon"></i>
+								</a>
+								
+								<h2 class="entry-title">
+									<a href="#">
+										Fusce tristique lectus
+									</a>
+									<small>Project Subtitle</small>
+								</h2>
+							</div>
+							</div>
+						</div>
+						
+						<img src="assets/resized/pre8.jpg" alt="Image"/>
+					</div>
+				</div>
+			</article>
+		</li>
+EOF
+		
+	, 	<<<EOF
+	<li data-size="1-2">
+			<article class="entry">
+				<div class="entry-featured">
+					<div class="overlay">
+						<div class="dark color-overlay"></div>
+						
+						<div class="content-overlay">
+							<div class="outer">
+							<div class="inner">
+								<a class="button colorbox" href="assets/full/pre7.jpg" data-title="Fusce tristique lectus <small>Project Subtitle</small>">
+									<i class="eye icon"></i>
+								</a>
+								
+								<h2 class="entry-title">
+									<a href="#">
+										Fusce tristique lectus
+									</a>
+									<small>Project Subtitle</small>
+								</h2>
+							</div>
+							</div>
+						</div>
+						
+						<img src="assets/resized/pre7.jpg" alt="Image"/>
+					</div>
+				</div>
+			</article>
+		</li>
+EOF
+		
+	, 	<<<EOF
+	<li data-size="1-2">
+			<article class="entry">
+				<div class="entry-featured">
+					<div class="overlay">
+						<div class="dark color-overlay"></div>
+						
+						<div class="content-overlay">
+							<div class="outer">
+							<div class="inner">
+								<a class="button colorbox" href="assets/full/pre6.jpg" data-title="Fusce tristique lectus <small>Project Subtitle</small>">
+									<i class="eye icon"></i>
+								</a>
+								
+								<h2 class="entry-title">
+									<a href="#">
+										Fusce tristique lectus
+									</a>
+									<small>Project Subtitle</small>
+								</h2>
+							</div>
+							</div>
+						</div>
+						
+						<img src="assets/resized/pre6.jpg" alt="Image"/>
+					</div>
+				</div>
+			</article>
+		</li>
+EOF
+		
+	, 	<<<EOF
+	<li data-size="1-2">
+			<article class="entry">
+				<div class="entry-featured">
+					<div class="overlay">
+						<div class="dark color-overlay"></div>
+						
+						<div class="content-overlay">
+							<div class="outer">
+							<div class="inner">
 								<a class="button colorbox" href="assets/full/pre1.jpg" data-title="Fusce tristique lectus <small>Project Subtitle</small>">
 									<i class="eye icon"></i>
 								</a>
