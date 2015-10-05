@@ -19,15 +19,15 @@ $entries = array(
 						<div class="content-overlay">
 							<div class="outer">
 							<div class="inner">
-								<a class="button colorbox" href="assets/full/pre8.jpg" data-title="Fusce tristique lectus <small>Project Subtitle</small>">
+								<a class="button colorbox" href="assets/full/pre8.jpg" data-title="From Greece to the World <small>Casaviva</small>">
 									<i class="eye icon"></i>
 								</a>
 								
 								<h2 class="entry-title">
 									<a href="#">
-										Fusce tristique lectus
+										From Greece to the World
 									</a>
-									<small>Project Subtitle</small>
+									<small>Casaviva</small>
 								</h2>
 							</div>
 							</div>
@@ -50,15 +50,15 @@ EOF
 						<div class="content-overlay">
 							<div class="outer">
 							<div class="inner">
-								<a class="button colorbox" href="assets/full/pre7.jpg" data-title="Fusce tristique lectus <small>Project Subtitle</small>">
+								<a class="button colorbox" href="assets/full/pre7.jpg" data-title="London is calling <small>Bye bye Milan</small>">
 									<i class="eye icon"></i>
 								</a>
 								
 								<h2 class="entry-title">
 									<a href="#">
-										Fusce tristique lectus
+										London is calling
 									</a>
-									<small>Project Subtitle</small>
+									<small>Bye bye Milan</small>
 								</h2>
 							</div>
 							</div>
@@ -81,15 +81,15 @@ EOF
 						<div class="content-overlay">
 							<div class="outer">
 							<div class="inner">
-								<a class="button colorbox" href="assets/full/pre6.jpg" data-title="Fusce tristique lectus <small>Project Subtitle</small>">
+								<a class="button colorbox" href="assets/full/pre6.jpg" data-title="See you in Milan <small>i Saloni 2015</small>">
 									<i class="eye icon"></i>
 								</a>
 								
 								<h2 class="entry-title">
 									<a href="#">
-										Fusce tristique lectus
+										See you in Milan
 									</a>
-									<small>Project Subtitle</small>
+									<small>i Saloni 2015</small>
 								</h2>
 							</div>
 							</div>
@@ -112,15 +112,15 @@ EOF
 						<div class="content-overlay">
 							<div class="outer">
 							<div class="inner">
-								<a class="button colorbox" href="assets/full/pre1.jpg" data-title="Fusce tristique lectus <small>Project Subtitle</small>">
+								<a class="button colorbox" href="assets/full/pre1.jpg" data-title="Exporting MADE IN GREECE <small>Casaviva</small>">
 									<i class="eye icon"></i>
 								</a>
 								
 								<h2 class="entry-title">
 									<a href="#">
-										Fusce tristique lectus
+										Exporting MADE IN GREECE
 									</a>
-									<small>Project Subtitle</small>
+									<small>Casaviva</small>
 								</h2>
 							</div>
 							</div>
@@ -143,15 +143,15 @@ EOF
 						<div class="content-overlay">
 							<div class="outer">
 							<div class="inner">
-								<a class="button colorbox" href="assets/full/pre2.jpg" data-title="Class aptent taciti <small>Project Subtitle</small>">
+								<a class="button colorbox" href="assets/full/pre2.jpg" data-title="Design, production, export <small>Papadatos</small>">
 									<i class="eye icon"></i>
 								</a>
 								
 								<h2 class="entry-title">
 									<a href="#">
-										Class aptent taciti
+										Design, production, export
 									</a>
-									<small>Project Subtitle</small>
+									<small>Papadatos</small>
 								</h2>
 							</div>
 							</div>
@@ -174,15 +174,15 @@ EOF
 						<div class="content-overlay">
 							<div class="outer">
 							<div class="inner">
-								<a class="button colorbox" href="assets/full/pre3.jpg" data-title="Vivamus blandit quam ac risus <small>Project Subtitle</small>">
+								<a class="button colorbox" href="assets/full/pre3.jpg" data-title="A scent of Greece in Milan <small>Elliniko Spiti</small>">
 									<i class="eye icon"></i>
 								</a>
 								
 								<h2 class="entry-title">
 									<a href="#">
-										Vivamus blandit quam ac risus
+										A scent of Greece in Milan 
 									</a>
-									<small>Project Subtitle</small>
+									<small>Elliniko Spiti</small>
 								</h2>
 							</div>
 							</div>
@@ -239,13 +239,13 @@ EOF
 						<div class="content-overlay">
 							<div class="outer">
 							<div class="inner">
-								<a class="button colorbox" href="assets/full/pre5.jpg" data-title="Ελληνικό Design <small>Casaviva</small>">
+								<a class="button colorbox" href="assets/full/pre5.jpg" data-title="Greek Design <small>Casaviva</small>">
 									<i class="eye icon"></i>
 								</a>
 								
 								<h2 class="entry-title">
 									<a href="#">
-										Ελληνικό Design
+										Greek Design
 									</a>
 									<small>Casaviva</small>
 								</h2>
