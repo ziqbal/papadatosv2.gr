@@ -24,3 +24,9 @@
 .small2 {
 	font-size: .5em;
 }
+.alignRight {
+	text-align: right;
+}
+.extra10PaddingLeft {
+	padding-left: 10px;
+}
