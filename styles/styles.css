@@ -1968,8 +1968,8 @@ overflow: hidden;
 
 	.overlay .icon.content-overlay{
 	position: absolute;
-	top: 50%;
-	left: 50%;
+	top: 0px;
+	left: 151px;
 	width: 40px;
 	height: 40px;
 	margin-top: -20px;
@@ -2718,9 +2718,9 @@ height: 100%;
 /* ----- fullscreen caption ----- */
 
 .fullscreen-caption{
-position: absolute;
-top: 30px;
-left: 0;
+	position: absolute;
+	top: 80px;
+	right: 40px;
 }
 
 .fullscreen-caption > *{
