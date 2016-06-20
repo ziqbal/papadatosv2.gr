@@ -19,6 +19,130 @@ $entries = array(
 						<div class="content-overlay">
 							<div class="outer">
 							<div class="inner">
+								<a class="button colorbox" href="assets/full/pre12.jpg" data-title="Greek Lessons in Milan <small></small>">
+									<i class="eye icon"></i>
+								</a>
+								
+								<h2 class="entry-title">
+									<a href="#">
+										Greek Lessons in Milan
+									</a>
+									<small></small>
+								</h2>
+							</div>
+							</div>
+						</div>
+						
+						<img src="assets/resized/pre12.jpg" alt="Image"/>
+					</div>
+				</div>
+			</article>
+		</li>
+EOF
+		
+	, 	<<<EOF
+		<li data-size="1-2">
+			<article class="entry">
+				<div class="entry-featured">
+					<div class="overlay">
+						<div class="dark color-overlay"></div>
+						
+						<div class="content-overlay">
+							<div class="outer">
+							<div class="inner">
+								<a class="button colorbox" href="assets/full/pre11.jpg" data-title="Invitation <small>iSaloni 16</small>">
+									<i class="eye icon"></i>
+								</a>
+								
+								<h2 class="entry-title">
+									<a href="#">
+										Invitation
+									</a>
+									<small>iSaloni 16</small>
+								</h2>
+							</div>
+							</div>
+						</div>
+						
+						<img src="assets/resized/pre11.jpg" alt="Image"/>
+					</div>
+				</div>
+			</article>
+		</li>
+EOF
+		
+	, 	<<<EOF
+		<li data-size="1-2">
+			<article class="entry">
+				<div class="entry-featured">
+					<div class="overlay">
+						<div class="dark color-overlay"></div>
+						
+						<div class="content-overlay">
+							<div class="outer">
+							<div class="inner">
+								<a class="button colorbox" href="assets/full/pre10.jpg" data-title="Invitation <small>Valencia Design Week</small>">
+									<i class="eye icon"></i>
+								</a>
+								
+								<h2 class="entry-title">
+									<a href="#">
+										Invitation
+									</a>
+									<small>Valencia Design Week</small>
+								</h2>
+							</div>
+							</div>
+						</div>
+						
+						<img src="assets/resized/pre10.jpg" alt="Image"/>
+					</div>
+				</div>
+			</article>
+		</li>
+EOF
+		
+	, 	<<<EOF
+		<li data-size="1-2">
+			<article class="entry">
+				<div class="entry-featured">
+					<div class="overlay">
+						<div class="dark color-overlay"></div>
+						
+						<div class="content-overlay">
+							<div class="outer">
+							<div class="inner">
+								<a class="button colorbox" href="assets/full/pre9.jpg" data-title="About a Sofa <small>Contract</small>">
+									<i class="eye icon"></i>
+								</a>
+								
+								<h2 class="entry-title">
+									<a href="#">
+										About a Sofa 
+									</a>
+									<small>Contract</small>
+								</h2>
+							</div>
+							</div>
+						</div>
+						
+						<img src="assets/resized/pre9.jpg" alt="Image"/>
+					</div>
+				</div>
+			</article>
+		</li>
+EOF
+		
+	, 	<<<EOF
+		<li data-size="1-2">
+			<article class="entry">
+				<div class="entry-featured">
+					<div class="overlay">
+						<div class="dark color-overlay"></div>
+						
+						<div class="content-overlay">
+							<div class="outer">
+							<div class="inner">
 								<a class="button colorbox" href="assets/full/pre8.jpg" data-title="From Greece to the World <small>Casaviva</small>">
 									<i class="eye icon"></i>
 								</a>
