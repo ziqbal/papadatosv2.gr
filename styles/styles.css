@@ -328,8 +328,8 @@ background: #e0e0e0;
 /*-------------------------------------------------------------------------------------*/
 
 #dock{
-	position: absolute;
-	/*position: fixed;*/
+	/*position: absolute;*/
+	position: fixed;
 	bottom: 0px;
 	left: 0px;
 	z-index: 2;
